@@ -37,10 +37,16 @@ if (user > pc) {
 //controlla che sia nella lista di chi può accedere,
 //stampa un messaggio appropriato sull’esito del controllo.
 
+const eMail = [
+    
+    'example0@email.it',
+    'example2@email.it',
+    'example3@email.it',
+    'example4@email.it',
+
+]
 
 
-
-
-
-
-
+const button = document.getElementById('button');
+const alert = document.querySelector('.alert');
+console.log(button);
