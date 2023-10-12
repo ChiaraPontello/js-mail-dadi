@@ -49,4 +49,16 @@ const eMail = [
 
 const button = document.getElementById('button');
 const alert = document.querySelector('.alert');
-console.log(button);
+
+
+button.addEventListener('click', function(){
+    let emailText = document.getElementById('email').value;
+    let autorizzato = false;
+    console.log(emailText);
+    for(let i = 0; i < eMail.length; i++){
+        let emailCorrente = eMail [i];
+        if (emailCorrente === emailText){
+            autorizzato = true;
+        }
+    }
+})
