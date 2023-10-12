@@ -10,14 +10,34 @@ let max = 6;
 Bottone.addEventListener("click", function(){
   
  
-const user = (Math.random() * (max - min + 1) + min);
+const user = parseInt(Math.random() * (max - min + 1) + min);
 const userNumber = document.querySelector(".userNumber");
-userNumber.innerHTML =" "+ user;
+userNumber.innerHTML = user;
 
 
-const pc = (Math.random() * (max - min + 1) + min);
+const pc = parseInt(Math.random() * (max - min + 1) + min);
 const pcNumber = document.querySelector(".pcNumber");
-pcNumber.innerHTML = " "+ pc;
+pcNumber.innerHTML = pc;
 
+
+const textVittoria = document.querySelector(".textVittoria");
+
+if (user > pc) {
+  textVittoria.innerHTML = "Ho vinto";
+}else if (user === pc) {
+  textVittoria.innerHTML = "Ho pareggiato";
+} else if (pc > user) {
+  textVittoria.innerHTML = "Hai perso";
 }
-)
+})
+
+
+
+
+
+
+
+
+
+
+
