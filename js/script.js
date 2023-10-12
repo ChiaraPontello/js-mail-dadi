@@ -57,8 +57,20 @@ button.addEventListener('click', function(){
     console.log(emailText);
     for(let i = 0; i < eMail.length; i++){
         let emailCorrente = eMail [i];
-        if (emailCorrente === emailText){
+        if (emailCorrente.toLocaleLowerCase() === emailText.toLocaleLowerCase()){
             autorizzato = true;
         }
     }
+
+    let text, mail;
+    if(autorizzato){
+        mail = 'alert-success';
+        text = 'Autorizzazione concessa';
+    } else {
+        mail ='alert-danger';
+        text = 'Autorizzazione non concessa';
+    }
+    alert.innerText = text;
+    alert.classList.add(mail);
+    alert.classList.remove('d-none');
 })
